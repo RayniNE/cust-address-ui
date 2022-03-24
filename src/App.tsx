@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import { CardActionArea } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
-function App() {
+const App: React.FC<any> = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardActionArea onClick={(event) => console.log(event)}>
+          <CardContent>
+            <Typography variant="h5" component="div">
+              Rayni Nunez Espino
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </>
   );
-}
+};
 
 export default App;
